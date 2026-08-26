@@ -10,6 +10,8 @@ CHIP Or {
     IN a, b;
     OUT out;
 
-    PARTS:
-    //// Replace this comment with your code.
+    PARTS: //De Morgan
+    Not(in=a, out=notA);
+	Not(in=b, out=notB);
+	Nand(a = notA, b=notB, out=out);
 }
